@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Gen</title>
+</head>
+<body>
+	<h1>Random Word (attempts:{{request.session.count}})</h1>
+	<div>
+		<p>{{randomword}}</p>
+	</div>
+	<form action='/generate' methods='POST'>
+	<input type="submit" value='Genderate'>
+	</form>
+</body>
+</html>
