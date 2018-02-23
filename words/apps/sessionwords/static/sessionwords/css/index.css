@@ -1,0 +1,30 @@
+*{
+	margin:0;
+	padding:0;
+}
+#wrapper{
+	width: 100%;
+}
+.red{
+	color: red;
+}
+.green{
+	color: green;
+}
+.blue{
+	font-color: blue;
+}
+.true{
+	font-size: 30px;
+}
+.false{
+	font-size: 15px;
+}
+.left{
+	display: inline-block;
+	width:50%;
+}
+.right{
+	display: inline-block;
+	width: 50%;
+}

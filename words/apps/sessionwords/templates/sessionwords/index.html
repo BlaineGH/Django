@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'sessionwords/css/index.css' %}">
+	<title>Session words</title>
+</head>
+<body>
+	<div id='wrapper'>
+		<div class="left">
+			<h1>Add a new word</h1>
+			<form action='/addword' method='POST'>
+				{% csrf_token %}
+				<input type="textarea" name="newword">
+				<label>Choose Color:</label>
+				<input type="radio" name="color" value='red'>Red
+				<input type="radio" name="color" value="green">Green
+				<input type="radio" name="color" value="blue">Blue
+				<input type="checkbox" name="bigfont">big font?
+				<input type="submit" name="submit">
+			</form>
+		</div>
+		<div class='right'>
+			{% for context in request.session.content %} 
+			<p class="{{context.color}} {{context.font}}"> {{context.word}} {{context.datetime}}</p>
+			{% endfor %}
+		</div>
+	</div>
+</body>
+</html>
