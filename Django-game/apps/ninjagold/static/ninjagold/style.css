@@ -1,0 +1,21 @@
+#wrapper{
+	width: 100%;
+}
+.box{
+	border: solid black 2px;
+	display: inline-block;
+	width: 20%;
+	text-align: center;
+}
+.red{
+	color: red;
+}
+.green{
+	color: green;
+}
+#activities{
+	border: solid black 2px;
+	height: 150px;
+	width: 700px;
+	overflow: scroll;
+}
